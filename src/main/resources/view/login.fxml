@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ratana.jfx.controller.LoginController">
-
-    <Label style="-fx-background-color: red;" text="Hello javafx" textFill="#b14444" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
-        <font>
-            <Font size="48" />
-        </font>
-    </Label>
-</AnchorPane>
+<VBox styleClass="login-view" stylesheets="@style/application.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ratana.jfx.controller.LoginController">
+   <children>
+      <HBox styleClass="header">
+         <children>
+                <Label styleClass="login-title" text="POS Login" textFill="#5e5e5e" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

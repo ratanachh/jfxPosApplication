@@ -1,0 +1,12 @@
+.login-view {
+    -fx-pref-width: 600px;
+}
+
+.login-title {
+    -fx-alignment: center-left;
+    -fx-padding: 16px;
+}
+
+.login-title > .header {
+    -fx-font-size: 18px;
+}
