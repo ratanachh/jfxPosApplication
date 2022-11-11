@@ -101,6 +101,7 @@
                     <appVersion>${project.version}</appVersion>
                     <description>This is jfx applicatio</description>
                     <vendor>Ratana CHHORM</vendor>
+                    <copyright>Copyright 2022, All rights reserved</copyright>
 
                     <type>MSI</type>
                     <input>target</input>

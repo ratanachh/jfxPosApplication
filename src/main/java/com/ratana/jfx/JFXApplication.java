@@ -18,7 +18,9 @@ public class JFXApplication extends Application {
 
     @Override
     public void init() {
+        System.out.println("hello");
         applicationContext = SpringApplication.run(JFXApplication.class);
+        System.out.println("bye bye");
     }
 
     @Override
