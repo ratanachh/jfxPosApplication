@@ -3,8 +3,8 @@ spring:
     web-application-type: none
   datasource:
     url: jdbc:postgresql://localhost:5432/pos
-    username: postgres
-    password: postgres
+    username: admin
+    password: 1234
   jpa:
     properties:
       hibernate:

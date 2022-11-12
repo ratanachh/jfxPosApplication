@@ -7,7 +7,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import java.util.List;
+import java.util.Arrays;
 
 @Configuration
 @AllArgsConstructor
@@ -18,7 +18,7 @@ public class DataInitializer {
     @Bean
     public CommandLineRunner getCommandLineRunner(){
         return (args) -> {
-            categoryRepository.saveAll(List.of(
+            categoryRepository.saveAll(Arrays.asList(
                     new Category("Drink"),
                     new Category("Rice"),
                     new Category("Ingredient"),
