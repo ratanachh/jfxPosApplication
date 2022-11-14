@@ -1,14 +1,61 @@
+* {
+    primary: #16213E;
+    secondary: #0F3460;
+    primary-light: #0F3460;
+    secondary-light: #E94560;
+}
+
+.text-primary {
+    -fx-text-fill: primary;
+}
+
+.text-secondary {
+    -fx-text-fill: secondary;
+}
+
+.text-primary-light {
+    -fx-text-fill: primary-light;
+}
+
+.text-secondary-light {
+    -fx-text-fill: secondary-light;
+}
+
+.text-danger {
+    -fx-text-fill: #dc3545 !important;
+}
+
+.text-success {
+    -fx-text-fill: #28a745 !important;
+}
+
+.text-muted {
+    -fx-text-fill: #6c757d !important;
+}
+.text-warning {
+    -fx-text-fill: #ffc107 !important;
+}
+.text-info {
+    -fx-text-fill: #17a2b8 !important;
+}
+.text-dark {
+    -fx-text-fill: #343a40!important;
+}
+
+
 .login-view {
-    -fx-pref-width: 600px;
+    -fx-pref-width: 500px;
 }
 
 .login-title {
     -fx-alignment: center-left;
-    -fx-padding: 16px;
+    -fx-padding: 14px;
+    -fx-background-color: primary;
 }
 
 .login-title > .header {
-    -fx-font-size: 18px;
+    -fx-font-size: 20px;
+    -fx-text-fill: white;
 }
 
 .login-body {
@@ -30,10 +77,54 @@
 .text-field, .password-field, .button {
     -fx-background-color: transparent;
     -fx-border-style: solid;
-    -fx-border-color: gray;
+    -fx-border-color: secondary;
 }
 
-.button:hover {
-    -fx-background-color: gray;
+.button:hover , .button:focused {
+    -fx-background-color: secondary;
     -fx-text-fill: white;
+}
+
+.preloader {
+    -fx-background-color: linear-gradient(to right, #000428, #004e92);
+}
+
+.transparent-background {
+    -fx-background-color: transparent;
+}
+
+.separator-label {
+    -fx-label-padding: -15px 10px 0 10px;
+    -fx-font-size: 60px;
+    -fx-text-fill: white;
+}
+
+.preloader-logo-label {
+    -fx-font-size: 100px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.preloader-logo-slogan {
+    -fx-alignment: center-left;
+}
+
+.preloader-logo-slogan-label {
+    -fx-font-size: 18px;
+    -fx-text-fill: white;
+}
+
+.progress-bar {
+    -fx-indeterminate-bar-length: 90;
+    -fx-indeterminate-bar-escape: true;
+    -fx-indeterminate-bar-flip: false;
+    -fx-indeterminate-bar-animation-time: 4;
+}
+.progress-bar > .bar {
+    -fx-background-insets: 1 1 2 1;
+    -fx-padding: 0.20em;
+}
+
+.progress-bar:indeterminate > .bar {
+    -fx-background-color: linear-gradient(to left, transparent, -fx-accent);
 }

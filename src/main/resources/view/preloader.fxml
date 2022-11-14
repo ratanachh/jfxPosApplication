@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox stylesheets="@style/application.css" xmlns="http://javafx.com/javafx">
+   <children>
+      <Pane styleClass="preloader">
+         <children>
+            <HBox>
+               <children>
+                  <GridPane alignment="CENTER" prefHeight="240.0" prefWidth="420.0">
+                    <columnConstraints>
+                      <ColumnConstraints maxWidth="-Infinity" minWidth="10.0" prefWidth="50.0" />
+                      <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints maxWidth="-Infinity" minWidth="10.0" prefWidth="50.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="5.0" valignment="CENTER" vgrow="ALWAYS" />
+                      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" HBox.hgrow="SOMETIMES">
+                                 <children>
+                                    <Label styleClass="preloader-logo-label" text="Q.S" />
+                                 </children>
+                              </HBox>
+                              <VBox alignment="CENTER">
+                                 <children>
+                                    <Label alignment="CENTER" graphicTextGap="0.0" styleClass="separator-label" text="|" />
+                                 </children>
+                              </VBox>
+                              <HBox alignment="CENTER_LEFT" HBox.hgrow="SOMETIMES">
+                                 <children>
+                                    <VBox styleClass="preloader-logo-slogan">
+                                       <children>
+                                          <Label alignment="CENTER" styleClass="preloader-logo-slogan-label" text="System" />
+                                          <Label alignment="CENTER" styleClass="preloader-logo-slogan-label" text="Grow with us." />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children></HBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                           <children>
+                              <ProgressBar blendMode="LIGHTEN" cache="true" nodeOrientation="LEFT_TO_RIGHT" prefWidth="440.0" scaleShape="false" styleClass="preloader-progress-bar">
+                                 <effect>
+                                    <Blend />
+                                 </effect>
+                              </ProgressBar>
+                           </children>
+                        </VBox>
+                     </children>
+                  </GridPane>
+               </children>
+            </HBox>
+         </children></Pane>
+   </children>
+</VBox>

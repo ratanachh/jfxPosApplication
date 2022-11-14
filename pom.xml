@@ -9,7 +9,7 @@
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.appName>pos-application</project.appName>
-        <project.mainClass>PosApplication</project.mainClass>
+        <project.mainClass>JFXApplication</project.mainClass>
         <project.version>1.0.0</project.version>
         <project.spring.version>2.7.5</project.spring.version>
         <project.javafx.version>17.0.2</project.javafx.version>

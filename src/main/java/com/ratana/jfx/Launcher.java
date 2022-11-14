@@ -1,6 +1,7 @@
 package com.ratana.jfx;
 
 import com.ratana.jfx.controller.LoginController;
+import com.sun.javafx.application.LauncherImpl;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.stage.Stage;
@@ -12,15 +13,13 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @SpringBootApplication
-public class JFXApplication extends Application {
+public class Launcher extends Application {
 
-    private ConfigurableApplicationContext applicationContext;
+    private static ConfigurableApplicationContext applicationContext;
 
     @Override
     public void init() {
-        System.out.println("hello");
-        applicationContext = SpringApplication.run(JFXApplication.class);
-        System.out.println("bye bye");
+        applicationContext = SpringApplication.run(Launcher.class);
     }
 
     @Override
@@ -35,6 +34,10 @@ public class JFXApplication extends Application {
     }
 
     public static void main(String[] args) {
-        launch(args);
+        LauncherImpl.launchApplication(Launcher.class, LauncherPreloader.class, args);
+    }
+
+    public static ConfigurableApplicationContext getApplicationContext() {
+        return applicationContext;
     }
 }
