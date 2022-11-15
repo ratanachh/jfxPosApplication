@@ -1,7 +1,7 @@
 * {
     primary: #16213E;
     secondary: #0F3460;
-    primary-light: #0F3460;
+    primary-light: #533483;
     secondary-light: #E94560;
 }
 
@@ -145,6 +145,16 @@
     -fx-pref-width: 100px;
     -fx-min-width: 100px;
     -fx-spacing: 5px;
+}
+
+.side-bar-menu:hover {
+    -fx-background-color: secondary-light;
+}
+
+
+.side-bar-menu:hover .label, .side-bar-menu:hover SVGPath {
+    -fx-text-fill: primary;
+    -fx-fill: primary;
 }
 
 .side-bar-menu .label, .side-bar-menu SVGPath {

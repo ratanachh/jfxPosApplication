@@ -62,9 +62,12 @@ public class LoginController {
     private void login() {
         try {
             loginUser = accountService.login(username.getText(), password.getText());
-            message.setText("Login success");
 
             // open main application
+            MainFrameController.show();
+
+            // close login view
+            close();
         } catch (ServiceException e) {
             message.setText(e.getMessage());
         }catch (RuntimeException e) {
