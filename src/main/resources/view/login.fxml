@@ -11,46 +11,53 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox styleClass="login-view" stylesheets="@style/application.css" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.ratana.jfx.controller.LoginController">
-   <children>
-      <HBox styleClass="login-title">
-         <children>
-                <Label styleClass="header" text="POS Login" textFill="#5e5e5e" />
-         </children>
-      </HBox>
-      <VBox styleClass="login-body">
-         <children>
-            <GridPane hgap="10.0" vgap="10.0">
-              <columnConstraints>
-                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="279.20001220703125" minWidth="10.0" prefWidth="114.40003204345703" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="547.1999931335449" minWidth="10.0" prefWidth="295.199967956543" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="16.0" vgrow="SOMETIMES" />
-              </rowConstraints>
-               <children>
-                  <Label fx:id="message" styleClass="text-danger" GridPane.columnIndex="1" />
-                  <Label text="Username : " styleClass="text-primary" GridPane.rowIndex="1" />
-                  <Label text="Password : " styleClass="text-primary" GridPane.rowIndex="2" />
-                  <TextField fx:id="username" promptText="Enter username" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <PasswordField fx:id="password" promptText="Enter passowrd" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <HBox GridPane.columnIndex="1" GridPane.rowIndex="3">
-                     <children>
-                        <Button fx:id="loginBtn" mnemonicParsing="false" onAction="#login" styleClass="w-120" text="LOGIN" />
-                        <Button fx:id="closeBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#close" styleClass="w-120" text="CLOSE" />
-                     </children>
-                     <styleClass>
-                        <String fx:value="sp-5" />
-                        <String fx:value="al-center-left" />
-                     </styleClass>
-                  </HBox>
-               </children>
-            </GridPane>
-         </children>
-      </VBox>
-   </children>
+<VBox styleClass="login-view" stylesheets="@style/application.css" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml" fx:controller="com.ratana.jfx.controller.LoginController">
+    <children>
+        <HBox styleClass="login-title">
+            <children>
+                <Label styleClass="header" text="POS Login" textFill="#5e5e5e"/>
+            </children>
+        </HBox>
+        <VBox styleClass="login-body">
+            <children>
+                <GridPane hgap="10.0" vgap="10.0">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="279.20001220703125"
+                                           minWidth="10.0" prefWidth="114.40003204345703"/>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="547.1999931335449" minWidth="10.0"
+                                           prefWidth="295.199967956543"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="16.0" vgrow="SOMETIMES"/>
+                    </rowConstraints>
+                    <children>
+                        <Label fx:id="message" styleClass="text-danger" GridPane.columnIndex="1"/>
+                        <Label text="Username : " styleClass="text-primary" GridPane.rowIndex="1"/>
+                        <Label text="Password : " styleClass="text-primary" GridPane.rowIndex="2"/>
+                        <TextField fx:id="username" promptText="Enter username" GridPane.columnIndex="1"
+                                   GridPane.rowIndex="1"/>
+                        <PasswordField fx:id="password" promptText="Enter passowrd" GridPane.columnIndex="1"
+                                       GridPane.rowIndex="2"/>
+                        <HBox GridPane.columnIndex="1" GridPane.rowIndex="3">
+                            <children>
+                                <Button fx:id="loginBtn" mnemonicParsing="false" onAction="#login" styleClass="w-120"
+                                        text="LOGIN"/>
+                                <Button fx:id="closeBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false"
+                                        onAction="#close" styleClass="w-120" text="CLOSE"/>
+                            </children>
+                            <styleClass>
+                                <String fx:value="sp-5"/>
+                                <String fx:value="al-center-left"/>
+                            </styleClass>
+                        </HBox>
+                    </children>
+                </GridPane>
+            </children>
+        </VBox>
+    </children>
 </VBox>

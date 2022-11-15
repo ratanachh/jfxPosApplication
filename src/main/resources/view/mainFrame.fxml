@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+
+
+<HBox styleClass="main-frame" stylesheets="@style/application.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ratana.jfx.controller.MainFrameController">
+   <children>
+      <VBox styleClass="side-bar">
+         <children>
+            <VBox styleClass="side-bar-menu">
+               <children>
+                  <SVGPath content="M32 19l-6-6v-9h-4v5l-6-6-16 16v1h4v10h10v-6h4v6h10v-10h4z" />
+                  <Label text="Home" />
+               </children>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="10.0" styleClass="side-bar-menu">
+               <children>
+                  <SVGPath content="M32 19l-6-6v-9h-4v5l-6-6-16 16v1h4v10h10v-6h4v6h10v-10h4z" />
+                  <Label text="POS" />
+               </children>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="90.0" styleClass="side-bar-menu">
+               <children>
+                  <SVGPath content="M32 19l-6-6v-9h-4v5l-6-6-16 16v1h4v10h10v-6h4v6h10v-10h4z" />
+                  <Label text="Sales" />
+               </children>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="170.0" styleClass="side-bar-menu">
+               <children>
+                  <SVGPath content="M32 19l-6-6v-9h-4v5l-6-6-16 16v1h4v10h10v-6h4v6h10v-10h4z" />
+                  <Label text="Category" />
+               </children>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="250.0" styleClass="side-bar-menu">
+               <children>
+                  <SVGPath content="M32 19l-6-6v-9h-4v5l-6-6-16 16v1h4v10h10v-6h4v6h10v-10h4z" />
+                  <Label text="Product" />
+               </children>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="330.0" styleClass="side-bar-menu">
+               <children>
+                  <SVGPath content="M32 19l-6-6v-9h-4v5l-6-6-16 16v1h4v10h10v-6h4v6h10v-10h4z" />
+                  <Label text="Exit" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</HBox>

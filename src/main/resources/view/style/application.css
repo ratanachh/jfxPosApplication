@@ -128,3 +128,26 @@
 .progress-bar:indeterminate > .bar {
     -fx-background-color: linear-gradient(to left, transparent, -fx-accent);
 }
+
+.main-frame {
+    -fx-pref-width: 1280px;
+    -fx-pref-height: 780px;
+}
+
+.side-bar {
+    -fx-padding: 10 0 0 0;
+    -fx-background-color: primary;
+}
+
+.side-bar-menu {
+    -fx-alignment: center;
+    -fx-pref-height: 80px;
+    -fx-pref-width: 100px;
+    -fx-min-width: 100px;
+    -fx-spacing: 5px;
+}
+
+.side-bar-menu .label, .side-bar-menu SVGPath {
+    -fx-text-fill: white;
+    -fx-fill: white;
+}
