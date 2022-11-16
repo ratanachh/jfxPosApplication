@@ -1,9 +1,11 @@
 package com.ratana.jfx.utils;
 
+import org.apache.commons.text.CaseUtils;
+
 public enum Menu {
     Home ("POS Dashboard"),
     Pos ("Tiny POS"),
-    Sales ("Sale History"),
+    Sale ("Sale History"),
     Category ("Category Management"),
     Product ("Product Management");
 
@@ -17,6 +19,6 @@ public enum Menu {
     }
 
     public String getFxml() {
-        return String.format("%s.fxml", name().toLowerCase());
+        return String.format("%s.fxml", CaseUtils.toCamelCase(name(), false));
     }
 }

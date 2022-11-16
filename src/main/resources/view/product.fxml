@@ -6,12 +6,12 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox styleClass="content-view" stylesheets="@style/application.css" xmlns="http://javafx.com/javafx/19"
-      xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ratana.jfx.controller.ProductController">
+<VBox styleClass="content-view" stylesheets="@style/application.css" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml" fx:controller="com.ratana.jfx.controller.ProductController">
 <children>
     <HBox>
         <children>
-            <Label styleClass="title" text="Category controller"/>
+            <Label styleClass="title" text="Product controller"/>
         </children>
     </HBox>
 </children>

@@ -6,12 +6,13 @@
 <?import javafx.scene.text.Font?>
 
 
-<VBox styleClass="content-view" stylesheets="@style/application.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ratana.jfx.controller.HomeController">
-   <children>
-      <HBox>
-         <children>
-             <Label styleClass="title" text="Home controller"/>
-         </children>
-      </HBox>
-   </children>
+<VBox styleClass="content-view" stylesheets="@style/application.css" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml" fx:controller="com.ratana.jfx.controller.HomeController">
+    <children>
+        <HBox>
+            <children>
+                <Label styleClass="title" text="Home controller"/>
+            </children>
+        </HBox>
+    </children>
 </VBox>
