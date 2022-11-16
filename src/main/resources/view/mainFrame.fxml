@@ -2,44 +2,45 @@
 
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.SVGPath?>
 
 <HBox styleClass="main-frame" stylesheets="@style/application.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ratana.jfx.controller.MainFrameController">
    <children>
-      <VBox styleClass="side-bar">
+      <VBox fx:id="sidebar" styleClass="side-bar">
          <children>
-            <VBox styleClass="side-bar-menu">
+            <VBox onMouseClicked="#clickMenu" styleClass="side-bar-menu">
                <children>
                   <SVGPath content="M32 19l-6-6v-9h-4v5l-6-6-16 16v1h4v10h10v-6h4v6h10v-10h4z" />
                   <Label text="Home" />
                </children>
             </VBox>
-            <VBox layoutX="10.0" layoutY="10.0" styleClass="side-bar-menu">
+            <VBox layoutX="10.0" layoutY="10.0" onMouseClicked="#clickMenu" styleClass="side-bar-menu">
                <children>
                   <SVGPath content="M12 29c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-1.657 1.343-3 3-3s3 1.343 3 3zM32 29c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-1.657 1.343-3 3-3s3 1.343 3 3zM32 16v-12h-24c0-1.105-0.895-2-2-2h-6v2h4l1.502 12.877c-0.915 0.733-1.502 1.859-1.502 3.123 0 2.209 1.791 4 4 4h24v-2h-24c-1.105 0-2-0.895-2-2 0-0.007 0-0.014 0-0.020l26-3.98z" />
                   <Label text="POS" />
                </children>
             </VBox>
-            <VBox layoutX="10.0" layoutY="90.0" styleClass="side-bar-menu">
+            <VBox layoutX="10.0" layoutY="90.0" onMouseClicked="#clickMenu" styleClass="side-bar-menu">
                <children>
                   <SVGPath content="M28 15.5v-13c0-0.266-0.234-0.5-0.5-0.5h-25c-0.266 0-0.5 0.234-0.5 0.5v13c0 0.266 0.234 0.5 0.5 0.5h25c0.266 0 0.5-0.234 0.5-0.5zM30 2.5v17c0 1.375-1.125 2.5-2.5 2.5h-8.5c0 1.328 1 2.453 1 3s-0.453 1-1 1h-8c-0.547 0-1-0.453-1-1 0-0.578 1-1.641 1-3h-8.5c-1.375 0-2.5-1.125-2.5-2.5v-17c0-1.375 1.125-2.5 2.5-2.5h25c1.375 0 2.5 1.125 2.5 2.5z" />
                   <Label text="Sales" />
                </children>
             </VBox>
-            <VBox layoutX="10.0" layoutY="170.0" styleClass="side-bar-menu">
+            <VBox layoutX="10.0" layoutY="170.0" onMouseClicked="#clickMenu" styleClass="side-bar-menu">
                <children>
                   <SVGPath content="M5 5c-1.104 0-2 0.887-2 2v8l13.381 13.381c0.716 0.716 1.838 0.78 2.62 0.191l-14.001-14.072v-9.493c0-0.002 0-0.005 0-0.007h-0zM16 4l13.381 13.381c0.783 0.783 0.787 2.051 0.008 2.831l-7.177 7.177c-0.778 0.778-2.047 0.776-2.831-0.008l-13.381-13.381v-8c0-1.112 0.895-2 2-2h8zM11.5 11c0.828 0 1.5-0.672 1.5-1.5s-0.672-1.5-1.5-1.5c-0.828 0-1.5 0.672-1.5 1.5s0.672 1.5 1.5 1.5v0z" />
                   <Label text="Category" />
                </children>
             </VBox>
-            <VBox layoutX="10.0" layoutY="250.0" styleClass="side-bar-menu">
+            <VBox layoutX="10.0" layoutY="250.0" onMouseClicked="#clickMenu" styleClass="side-bar-menu">
                <children>
                   <SVGPath content="M24.11 10c0.566-0.402 1.11-0.851 1.608-1.348 1.044-1.044 1.742-2.328 1.966-3.616 0.246-1.412-0.115-2.723-0.988-3.597-0.697-0.697-1.641-1.065-2.73-1.065-1.551 0-3.185 0.744-4.483 2.043-2.077 2.077-3.288 4.945-3.94 6.991-0.482-2.056-1.444-4.833-3.313-6.702-1.003-1.003-2.285-1.518-3.495-1.518-0.989 0-1.931 0.344-2.633 1.046-1.562 1.562-1.351 4.306 0.471 6.128 0.65 0.65 1.409 1.189 2.21 1.638h-6.782v8h2v14h24v-14h2v-8h-5.89zM21.073 4.007c0.866-0.866 1.948-1.384 2.892-1.384 0.334 0 0.803 0.070 1.139 0.406 0.813 0.813 0.357 2.697-0.977 4.031-1.373 1.373-3.221 2.318-4.826 2.939h-1.584c0.58-1.798 1.627-4.264 3.356-5.993zM7.31 5.028c-0.022-0.285-0.002-0.82 0.381-1.203 0.32-0.32 0.743-0.387 1.042-0.387v0c0.664 0 1.358 0.313 1.904 0.859 1.059 1.058 1.93 2.743 2.521 4.871 0.016 0.057 0.031 0.115 0.047 0.171-0.057-0.015-0.114-0.031-0.171-0.047-2.128-0.591-3.813-1.462-4.871-2.521-0.495-0.495-0.805-1.13-0.853-1.743zM14 30h-8v-13h8v13zM14 16h-10v-4h10v4zM26 30h-8v-13h8v13zM28 16h-10v-4h10v4z" />
                   <Label text="Product" />
                </children>
             </VBox>
-            <VBox layoutX="10.0" layoutY="330.0" styleClass="side-bar-menu">
+            <VBox layoutX="10.0" layoutY="330.0" onMouseClicked="#clickMenu" styleClass="side-bar-menu">
                <children>
                   <SVGPath content="M20 4.581v4.249c1.131 0.494 2.172 1.2 3.071 2.099 1.889 1.889 2.929 4.4 2.929 7.071s-1.040 5.182-2.929 7.071c-1.889 1.889-4.4 2.929-7.071 2.929s-5.182-1.040-7.071-2.929c-1.889-1.889-2.929-4.4-2.929-7.071s1.040-5.182 2.929-7.071c0.899-0.899 1.94-1.606 3.071-2.099v-4.249c-5.783 1.721-10 7.077-10 13.419 0 7.732 6.268 14 14 14s14-6.268 14-14c0-6.342-4.217-11.698-10-13.419zM14 0h4v16h-4z" />
                   <Label text="Exit" />
@@ -47,5 +48,6 @@
             </VBox>
          </children>
       </VBox>
+      <StackPane fx:id="contentView" HBox.hgrow="ALWAYS" />
    </children>
 </HBox>

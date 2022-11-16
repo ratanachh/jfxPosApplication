@@ -40,9 +40,9 @@
                         <Label text="Username : " styleClass="text-primary" GridPane.rowIndex="1"/>
                         <Label text="Password : " styleClass="text-primary" GridPane.rowIndex="2"/>
                         <TextField fx:id="username" promptText="Enter username" GridPane.columnIndex="1"
-                                   GridPane.rowIndex="1"/>
+                                   GridPane.rowIndex="1" text="admin"/>
                         <PasswordField fx:id="password" promptText="Enter passowrd" GridPane.columnIndex="1"
-                                       GridPane.rowIndex="2"/>
+                                       GridPane.rowIndex="2" text="1234"/>
                         <HBox GridPane.columnIndex="1" GridPane.rowIndex="3">
                             <children>
                                 <Button fx:id="loginBtn" mnemonicParsing="false" onAction="#login" styleClass="w-120"

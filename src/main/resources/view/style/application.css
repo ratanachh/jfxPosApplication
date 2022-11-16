@@ -151,7 +151,6 @@
     -fx-background-color: secondary-light;
 }
 
-
 .side-bar-menu:hover .label, .side-bar-menu:hover SVGPath {
     -fx-text-fill: primary;
     -fx-fill: primary;
@@ -160,4 +159,17 @@
 .side-bar-menu .label, .side-bar-menu SVGPath {
     -fx-text-fill: white;
     -fx-fill: white;
+}
+
+.content-view {
+    -fx-pref-width: 1180px;
+    -fx-pref-height: 780px;
+}
+
+.content-view-header {
+    -fx-padding: 20px;
+}
+
+.content-view-header > .title {
+    -fx-font-size: 20px;
 }
