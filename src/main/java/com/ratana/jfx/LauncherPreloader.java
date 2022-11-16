@@ -17,8 +17,7 @@ public class LauncherPreloader extends Preloader {
     @Override
     public void start(Stage stage) throws Exception {
         preloadStage = stage;
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/view/preloader.fxml")));
-        stage.setScene(new Scene(root));
+        stage.setScene(new Scene(ScreenUtils.getView("preloader.fxml")));
         stage.initStyle(StageStyle.UNDECORATED);
         stage.show();
         ScreenUtils.centerScreen(stage);
