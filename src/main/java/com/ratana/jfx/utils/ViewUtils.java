@@ -1,7 +1,6 @@
 package com.ratana.jfx.utils;
 
 import com.ratana.jfx.Launcher;
-import com.ratana.jfx.controller.MainFrameController;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
@@ -9,9 +8,8 @@ import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.Objects;
 
-public class ScreenUtils {
+public class ViewUtils {
 
     public static void centerScreen(Stage stage) {
         Rectangle2D primScreenBounds = Screen.getPrimary().getVisualBounds();

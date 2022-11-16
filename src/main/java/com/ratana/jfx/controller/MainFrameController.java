@@ -2,7 +2,7 @@ package com.ratana.jfx.controller;
 
 import com.ratana.jfx.Launcher;
 import com.ratana.jfx.utils.Menu;
-import com.ratana.jfx.utils.ScreenUtils;
+import com.ratana.jfx.utils.ViewUtils;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -16,7 +16,6 @@ import org.apache.commons.text.CaseUtils;
 import org.springframework.stereotype.Controller;
 
 import java.io.IOException;
-import java.util.Objects;
 
 @Controller
 public class MainFrameController {
@@ -47,7 +46,7 @@ public class MainFrameController {
             if (menu.equals(currentMenu)) {
                 return;
             }
-            FXMLLoader loader = ScreenUtils.getViewLoader(menu.getFxml());
+            FXMLLoader loader = ViewUtils.getViewLoader(menu.getFxml());
             loader.setControllerFactory(Launcher.getApplicationContext()::getBean);
             currentMenu = menu;
             contentView.getChildren().clear();
@@ -60,7 +59,7 @@ public class MainFrameController {
     public static void show() {
         try {
             Stage stage = new Stage();
-            Parent root = ScreenUtils.getView("mainFrame.fxml");
+            Parent root = ViewUtils.getView("mainFrame.fxml");
             stage.setScene(new Scene(root));
             stage.show();
         } catch (Exception e) {

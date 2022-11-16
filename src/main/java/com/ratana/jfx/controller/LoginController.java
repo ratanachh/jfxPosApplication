@@ -1,11 +1,10 @@
 package com.ratana.jfx.controller;
 
-import com.ratana.jfx.exception.ResourceNotFoundException;
 import com.ratana.jfx.Launcher;
 import com.ratana.jfx.exception.ServiceException;
 import com.ratana.jfx.model.Account;
 import com.ratana.jfx.service.AccountService;
-import com.ratana.jfx.utils.ScreenUtils;
+import com.ratana.jfx.utils.ViewUtils;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -21,7 +20,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 
 import java.io.IOException;
-import java.util.Objects;
 
 @Controller
 @RequiredArgsConstructor
@@ -77,7 +75,7 @@ public class LoginController {
     }
 
     public static void loadView(Stage stage) throws IOException {
-        FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(LoginController.class.getResource("/view/login.fxml")));
+        FXMLLoader loader = ViewUtils.getViewLoader("login.fxml");
         loader.setControllerFactory(Launcher.getApplicationContext()::getBean);
         Parent view = loader.load();
         stage.setScene(new Scene(view));
@@ -85,6 +83,6 @@ public class LoginController {
         controller.attachEvent();
         stage.initStyle(StageStyle.UNDECORATED);
         stage.show();
-        ScreenUtils.centerScreen(stage);
+        ViewUtils.centerScreen(stage);
     }
 }

@@ -1,14 +1,10 @@
 package com.ratana.jfx;
 
-import com.ratana.jfx.utils.ScreenUtils;
+import com.ratana.jfx.utils.ViewUtils;
 import javafx.application.Preloader;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-
-import java.util.Objects;
 
 public class LauncherPreloader extends Preloader {
 
@@ -17,10 +13,10 @@ public class LauncherPreloader extends Preloader {
     @Override
     public void start(Stage stage) throws Exception {
         preloadStage = stage;
-        stage.setScene(new Scene(ScreenUtils.getView("preloader.fxml")));
+        stage.setScene(new Scene(ViewUtils.getView("preloader.fxml")));
         stage.initStyle(StageStyle.UNDECORATED);
         stage.show();
-        ScreenUtils.centerScreen(stage);
+        ViewUtils.centerScreen(stage);
     }
 
     @Override
