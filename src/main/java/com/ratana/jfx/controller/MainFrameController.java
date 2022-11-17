@@ -1,6 +1,7 @@
 package com.ratana.jfx.controller;
 
 import com.ratana.jfx.Launcher;
+import com.ratana.jfx.component.Dialog;
 import com.ratana.jfx.utils.Menu;
 import com.ratana.jfx.utils.ViewUtils;
 import javafx.fxml.FXML;
@@ -35,7 +36,12 @@ public class MainFrameController {
     private void clickMenu(MouseEvent event) {
         Node node = (Node) event.getSource();
         if (node.getId().equals("exit")) {
-            sidebar.getScene().getWindow().hide();
+            Dialog.DialogBuilder
+                .builder()
+                .title("Confirm")
+                .message("Do you want to exit program?")
+                .okActionListener(() -> sidebar.getScene().getWindow().hide())
+                .build().show();
         } else {
             loadView(Menu.valueOf(CaseUtils.toCamelCase(node.getId(), true)));
         }

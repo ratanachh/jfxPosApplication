@@ -21,6 +21,10 @@ public class ViewUtils {
         return new FXMLLoader(Launcher.class.getResource(String.format("/view/%s", viewName)));
     }
 
+    public static FXMLLoader getComponentViewLoader(String viewName) {
+        return new FXMLLoader(Launcher.class.getResource(String.format("/view/component/%s", viewName)));
+    }
+
     public static Parent getView(String viewName) throws IOException {
         return getViewLoader(viewName).load();
     }
