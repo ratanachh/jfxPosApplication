@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
-
-
 <VBox styleClass="content-view" stylesheets="@style/application.css" xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml" fx:controller="com.ratana.jfx.controller.HomeController">
-    <children>
-        <HBox>
-            <children>
-                <Label styleClass="title" text="Home controller"/>
-            </children>
-        </HBox>
-    </children>
+    <HBox styleClass="content-view-header">
+        <Label fx:id="title" styleClass="title" text="Home controller"/>
+    </HBox>
 </VBox>

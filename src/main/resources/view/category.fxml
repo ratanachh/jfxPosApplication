@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <VBox styleClass="content-view" stylesheets="@style/application.css" xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml" fx:controller="com.ratana.jfx.controller.CategoryController">
-<children>
-    <HBox>
-        <children>
-            <Label styleClass="title" text="Category controller"/>
-        </children>
+    <HBox styleClass="content-view-header">
+        <Label fx:id="title" styleClass="title" text="Category controller"/>
     </HBox>
-</children>
 </VBox>

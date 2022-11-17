@@ -3,5 +3,5 @@ package com.ratana.jfx.controller;
 import org.springframework.stereotype.Controller;
 
 @Controller
-public class PosController {
+public class PosController  extends AbstractController {
 }

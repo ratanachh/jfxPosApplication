@@ -62,9 +62,12 @@ public class MainFrameController {
             }
             FXMLLoader loader = ViewUtils.getViewLoader(menu.getFxml());
             loader.setControllerFactory(Launcher.getApplicationContext()::getBean);
+            Parent view = loader.load();
+            AbstractController controller = loader.getController();
+            controller.setTitle(menu);
             selectedMenuItem = menu;
             contentView.getChildren().clear();
-            contentView.getChildren().add(loader.load());
+            contentView.getChildren().add(view);
         } catch (IOException e) {
             e.printStackTrace();
         }
