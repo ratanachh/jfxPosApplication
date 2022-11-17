@@ -161,6 +161,10 @@
     -fx-fill: white;
 }
 
+.side-bar-menu.active {
+    -fx-background-color: secondary-light;
+}
+
 .content-view {
     -fx-pref-width: 1180px;
     -fx-pref-height: 780px;

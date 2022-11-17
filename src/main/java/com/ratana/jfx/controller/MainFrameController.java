@@ -24,7 +24,7 @@ public class MainFrameController {
     @FXML
     private StackPane contentView;
 
-    private Menu currentMenu;
+    private Menu selectedMenuItem;
 
     @FXML
     private void initialize() {
@@ -43,12 +43,20 @@ public class MainFrameController {
 
     private void loadView(Menu menu)  {
         try {
-            if (menu.equals(currentMenu)) {
+            if (menu.equals(selectedMenuItem)) {
                 return;
+            }
+
+            for (Node node : sidebar.getChildren()) {
+                if (node.getId().equals(CaseUtils.toCamelCase(menu.name(), false))) {
+                    node.getStyleClass().add("active");
+                } else {
+                    node.getStyleClass().remove("active");
+                }
             }
             FXMLLoader loader = ViewUtils.getViewLoader(menu.getFxml());
             loader.setControllerFactory(Launcher.getApplicationContext()::getBean);
-            currentMenu = menu;
+            selectedMenuItem = menu;
             contentView.getChildren().clear();
             contentView.getChildren().add(loader.load());
         } catch (IOException e) {
