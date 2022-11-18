@@ -2,10 +2,12 @@
 
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.TilePane?>
 <?import javafx.scene.layout.VBox?>
-<VBox styleClass="content-view" stylesheets="@style/application.css" xmlns="http://javafx.com/javafx"
-      xmlns:fx="http://javafx.com/fxml" fx:controller="com.ratana.jfx.controller.CategoryController">
+
+<VBox styleClass="content-view" stylesheets="@style/application.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ratana.jfx.controller.CategoryController">
     <HBox styleClass="content-view-header">
-        <Label fx:id="title" styleClass="title" text="Category controller"/>
+        <Label fx:id="title" styleClass="title" text="Category" />
     </HBox>
+   <TilePane prefHeight="200.0" prefWidth="200.0" styleClass="category-container" VBox.vgrow="ALWAYS" />
 </VBox>

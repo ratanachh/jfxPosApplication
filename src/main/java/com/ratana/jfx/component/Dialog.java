@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -66,6 +67,7 @@ public class Dialog {
                 stage.setScene(new Scene(view));
 
                 Dialog controller = loader.getController();
+                stage.initModality(Modality.APPLICATION_MODAL);
                 controller.stage = stage;
 
                 controller.title.setText(this.title);
