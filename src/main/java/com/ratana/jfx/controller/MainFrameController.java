@@ -26,40 +26,36 @@ public class MainFrameController {
     private StackPane contentView;
 
     private Menu selectedMenuItem;
+    private static MainFrameController _this;
 
     @FXML
     private void initialize() {
         loadView(Menu.Home);
+        _this = this;
     }
 
     @FXML
     private void clickMenu(MouseEvent event) {
         Node node = (Node) event.getSource();
         if (node.getId().equals("exit")) {
-            Dialog.DialogBuilder
-                .builder()
-                .title("Confirm")
-                .message("Do you want to exit program?")
-                .okActionListener(() -> sidebar.getScene().getWindow().hide())
-                .build().show();
+            closeProgram();
         } else {
             loadView(Menu.valueOf(CaseUtils.toCamelCase(node.getId(), true)));
         }
     }
 
+    private void closeProgram() {
+        Dialog.DialogBuilder
+                .builder()
+                .title("Confirm")
+                .message("Do you want to exit program?")
+                .okActionListener(() -> sidebar.getScene().getWindow().hide())
+                .build().show();
+    }
+
     private void loadView(Menu menu)  {
         try {
-            if (menu.equals(selectedMenuItem)) {
-                return;
-            }
-
-            for (Node node : sidebar.getChildren()) {
-                if (node.getId().equals(CaseUtils.toCamelCase(menu.name(), false))) {
-                    node.getStyleClass().add("active");
-                } else {
-                    node.getStyleClass().remove("active");
-                }
-            }
+            setSelectedMenuItem(menu);
             FXMLLoader loader = ViewUtils.getViewLoader(menu.getFxml());
             loader.setControllerFactory(Launcher.getApplicationContext()::getBean);
             Parent view = loader.load();
@@ -73,12 +69,30 @@ public class MainFrameController {
         }
     }
 
+    private void setSelectedMenuItem(Menu menu) {
+        if (menu.equals(selectedMenuItem)) {
+            return;
+        }
+
+        for (Node node : sidebar.getChildren()) {
+            if (node.getId().equals(CaseUtils.toCamelCase(menu.name(), false))) {
+                node.getStyleClass().add("active");
+            } else {
+                node.getStyleClass().remove("active");
+            }
+        }
+    }
+
     public static void show() {
         try {
             Stage stage = new Stage();
             Parent root = ViewUtils.getView("mainFrame.fxml");
             stage.setScene(new Scene(root));
             stage.show();
+            stage.setOnCloseRequest(event -> {
+                event.consume();
+                _this.closeProgram();
+            });
         } catch (Exception e) {
             e.printStackTrace();
         }
