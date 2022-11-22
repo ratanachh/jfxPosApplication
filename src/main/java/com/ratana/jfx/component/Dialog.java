@@ -1,12 +1,14 @@
 package com.ratana.jfx.component;
 
 import com.ratana.jfx.utils.ViewUtils;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.input.KeyCode;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -43,6 +45,19 @@ public class Dialog {
         double pointY = window.getY();
         stage.setX(pointX + (centerWidthWindow - centerWidthDialog));
         stage.setY(pointY + (centerHeightWindow - centerHeightDialog));
+    }
+
+
+    private void attachEvent() {
+        stage.getScene().setOnKeyPressed( event -> {
+            if (event.getCode() == KeyCode.ENTER) {
+                if (okButton.isFocused()) {
+                    Platform.exit();
+                } else {
+                    cancel();
+                }
+            }
+        });
     }
 
     public static class DialogBuilder {
@@ -96,6 +111,8 @@ public class Dialog {
                 } else {
                     controller.okButton.setVisible(false);
                 }
+
+                controller.attachEvent();
 
                 return controller;
             } catch (Exception e) {
