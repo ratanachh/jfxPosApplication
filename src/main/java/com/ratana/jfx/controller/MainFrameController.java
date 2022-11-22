@@ -13,6 +13,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.stage.Window;
 import org.apache.commons.text.CaseUtils;
 import org.springframework.stereotype.Controller;
 
@@ -45,12 +46,13 @@ public class MainFrameController {
     }
 
     private void closeProgram() {
+        Window window = sidebar.getScene().getWindow();
         Dialog.DialogBuilder
                 .builder()
                 .title("Confirm")
                 .message("Do you want to exit program?")
-                .okActionListener(() -> sidebar.getScene().getWindow().hide())
-                .build().show();
+                .okActionListener(window::hide)
+                .build().show().center(window);
     }
 
     private void loadView(Menu menu)  {

@@ -10,6 +10,7 @@ import javafx.scene.control.Label;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import javafx.stage.Window;
 
 public class Dialog {
     @FXML
@@ -26,8 +27,22 @@ public class Dialog {
 
     private Stage stage;
 
-    public void show() {
+    public Dialog show() {
         stage.show();
+        return this;
+    }
+
+    public void center(Window window) {
+        double centerHeightDialog = stage.getHeight() / 2;
+        double centerWidthDialog = stage.getWidth() / 2;
+
+        double centerHeightWindow = window.getHeight() / 2;
+        double centerWidthWindow = window.getWidth() / 2;
+
+        double pointX = window.getX();
+        double pointY = window.getY();
+        stage.setX(pointX + (centerWidthWindow - centerWidthDialog));
+        stage.setY(pointY + (centerHeightWindow - centerHeightDialog));
     }
 
     public static class DialogBuilder {
