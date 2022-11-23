@@ -221,4 +221,23 @@
 
 .category-container {
     -fx-padding: 0 20px 20px 20px;
+    -fx-vgap: 20px;
+    -fx-hgap: 20px;
+}
+
+.category-item {
+    -fx-alignment: center-left;
+    -fx-padding: 20px;
+    -fx-spacing: 20px;
+    -fx-pref-width: 240px;
+    -fx-background-color: secondary;
+}
+
+.category-item .label {
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+}
+
+.category-item SVGPath {
+    -fx-fill: white;
 }
